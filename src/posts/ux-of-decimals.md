@@ -77,11 +77,11 @@ In this case, maximum accuracy matters more than readability.
 
 ## Closing Thoughts
 
-Decimals may look like a small detail and are often overlooked, but how we present them has a big impact on user trust. By combining both approaches, we can show numbers in a way that _**feels**_ both accurate and trustworthy.
+Decimals may look like a small detail and are often overlooked in UI design, but how we present them has a big impact on user trust. We can show numbers in a way that _**feels**_ both accurate and trustworthy by carefully designing its logic.
 
-Especially in crypto, where the difference between 0.000004 and 0.00000427 can matter, this balance becomes even more important. Getting it right doesn’t just make the interface cleaner — it makes the entire experience feel more reliable.
+Especially in crypto where the difference between 0.000004 & 0.00000427 can matter, this balance becomes even more important. Getting it right doesn't just make the interface cleaner but it can also make the entire UX feel more reliable.
 
-And while this article focuses on crypto and finance, the same principles hold true wherever precision and readability are needed, from everyday tools to products that deal with numbers at scale.
+And while this article focuses on finance & crypto, the same principles hold true whenever precisiosn and readaibility are needed. From everyday tools to products that deal with numbers at scale.
 
 If you have any ideas on how to further improve this, or just want to chat, feel free to reach out at [**hello@javierlo.com**](mailto:hello@javierlo.com).
 
