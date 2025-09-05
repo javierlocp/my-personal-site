@@ -20,6 +20,15 @@
   h1 {
     @apply text-2xl font-semibold text-neutral-50;
   }
+
+  h2 {
+    @apply text-xl font-semibold text-neutral-50;
+  }
+
+  h3 {
+    @apply text-lg font-semibold text-neutral-50;
+  }
+
   p {
     @apply text-base antialiased;
   }
