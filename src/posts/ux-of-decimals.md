@@ -81,7 +81,7 @@ Decimals may look like a small detail and are often overlooked in UI design, but
 
 Especially in crypto where the difference between 0.000004 & 0.00000427 can matter, this balance becomes even more important. Getting it right doesn't just make the interface cleaner but it can also make the entire UX feel more reliable.
 
-And while this article focuses on finance & crypto, the same principles hold true whenever precisiosn and readaibility are needed. From everyday tools to products that deal with numbers at scale.
+And while this article focuses on finance & crypto, the same principles hold true whenever precision and readability are needed. From everyday tools to products that deal with numbers at scale.
 
 If you have any ideas on how to further improve this, or just want to chat, feel free to reach out at [**hello@javierlo.com**](mailto:hello@javierlo.com).
 
