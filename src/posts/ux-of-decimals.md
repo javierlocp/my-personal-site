@@ -85,4 +85,4 @@ And while this article focuses on finance & crypto, the same principles hold tru
 
 If you have any ideas on how to further improve this, or just want to chat, feel free to reach out at [**hello@javierlo.com**](mailto:hello@javierlo.com).
 
-Thank you for reading 🙏🏻.
+Thank you for reading 🙏🏻 & Thanks [Fendy Ibrahim](https://www.linkedin.com/in/iamfnd/) for proofreading.
