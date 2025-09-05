@@ -35,15 +35,15 @@ When displaying crypto balances, the goal is to balance accuracy, readability, a
 
 ## 1. Minimum Significant Decimals Rule
 
-Minimum Significant Decimals refers to the smallest number of decimal places that still carries meaningful information for users. Defining and enforcing this rule helps cover most edge cases. If you’re unsure about what minimum to use, you can fall back on the native token’s decimals and test different values.
+Minimum Significant Decimals refers to the smallest number of decimal places that still carries meaningful information for users. Defining and enforcing this rule helps cover most edge cases. If you don't know which minimum decimals to choose, you can fall back on the native token’s decimals and test different values.
 
 ![Minimum Significant Decimals](/blog/min-sig-dec-rule.png 'Minimum Significant Decimals Example')
 
-### Always display a minimum number of decimals, even for larger values.
+### Always display a minimum number of decimals
 
 Example: **1.150000 ETH** instead of **1.15 ETH** — this avoids the impression of rounding uncertainty.
 
-### Set a maximum number of decimals to avoid noise.
+### Set a maximum number of decimals
 
 Example: **0.00000427 ETH** and **0.000004271063139123 ETH** both equal $0.02, so the extra precision adds no value.
 
@@ -55,7 +55,7 @@ Example: Display < 0.000001 instead of truncating to 0.00000…
 
 ## 2. Value-scaled Precision Rule
 
-While the Minimum Significant Decimals Rule ensures clarity by avoiding under- or over-rounding, the Value-Scaled Precision Rule helps adjust the number of decimals shown based on the size of the value.
+While the Minimum Significant Decimals Rule ensures clarity by avoiding under/over-rounding, the Value-Scaled Precision Rule helps adjust the number of decimals shown based on the size of the value.
 
 The idea is simple: as values increase, fewer decimals are needed to remain meaningful. Your UI should scale precision according to the value, ensuring users always see enough detail without being overwhelmed by noise.
 
