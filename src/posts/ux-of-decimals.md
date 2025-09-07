@@ -89,4 +89,4 @@ Thank you for reading. 🙏🏻
 
 Special thanks to [Fendy Ibrahim](https://www.linkedin.com/in/iamfnd/) for proofreading.
 
-\* All UI examples are handcrafted by Javier Lo.
+\* Disclaimer: All UI examples are handcrafted by Javier Lo.
