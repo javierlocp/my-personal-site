@@ -38,6 +38,7 @@ const Blog = () => {
           </li>
         ))}
       </ul>
+      <iframe className="mt-12" src="https://paragraph.com/@vestigia/embed" width="100%" height="280" />
     </>
   );
 };
