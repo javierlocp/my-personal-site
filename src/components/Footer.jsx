@@ -27,6 +27,9 @@ const Footer = () => {
             <ExternalLink className="text-sm text-neutral-400 md:self-end" href="https://www.linkedin.com/in/javierlo">
               LinkedIn
             </ExternalLink>
+            <ExternalLink className="text-sm text-neutral-400 md:self-end" href="https://paragraph.com/@vestigia">
+              Paragraph
+            </ExternalLink>
           </p>
         </div>
       </div>
