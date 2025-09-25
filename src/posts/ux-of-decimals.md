@@ -64,7 +64,7 @@ The idea is simple: as values increase, fewer decimals are needed to remain mean
 The example above follows these rules (adjust them as needed):
 
 - Start with a base precision of 8 decimals
-- For each power of 10 increase in the integer value, reduce the decimal precision by 1.
+- For each power of 10 increase in the integer value, reduce the decimal precision by 1
 - Set a minimum floor of 2 decimals (optional but recommended)
 
 ## When not to apply these rules
