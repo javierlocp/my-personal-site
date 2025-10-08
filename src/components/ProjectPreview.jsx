@@ -33,6 +33,16 @@ const ProjectPreview = () => {
             <div className="absolute inset-x-0 bottom-0 bg-linear-to-b from-neutral-900/0 to-neutral-950 p-2 text-center text-[12px] font-semibold text-neutral-400 italic">Custom Icons</div>
           </div>
         </div>
+        <div className="my-8">
+          <a
+            href="https://cal.com/javierlo"
+            target="_blank"
+            rel="noopener"
+            className="inline-block rounded-full bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-900 transition-transform hover:bg-gray-300 active:scale-90"
+          >
+            Book a Call
+          </a>
+        </div>
       </section>
     </>
   );
