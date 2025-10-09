@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ExternalLink } from '.'; //import directly from barrel file
+import { ExternalLink, BookCall } from '.'; //import directly from barrel file
 
 const ProjectPreview = () => {
   return (
@@ -34,14 +34,7 @@ const ProjectPreview = () => {
           </div>
         </div>
         <div className="my-8">
-          <a
-            href="https://cal.com/javierlo"
-            target="_blank"
-            rel="noopener"
-            className="inline-block rounded-full bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-900 transition-transform hover:bg-gray-300 active:scale-90"
-          >
-            Book a Call
-          </a>
+          <BookCall />
         </div>
       </section>
     </>
