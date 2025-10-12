@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export default function LightboxModal({ open, src, alt = '', onClose, onPrev, onNext, link, wip }) {
+export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, onNext, link, wip }) {
   const overlayRef = useRef(null);
 
   // Mount long enough to play exit animation

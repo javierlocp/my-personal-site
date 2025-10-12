@@ -1,5 +1,4 @@
-import { ExternalLink } from '.'; //import directly from barrel file
-import LightboxModal from './LightBoxModal';
+import { ExternalLink, LightBoxModal } from '.'; //import directly from barrel file
 import { useState } from 'react';
 
 const thumbs = [
@@ -66,9 +65,9 @@ export default function ProjectPreview() {
 
       {/* Project Gallery Grid */}
 
-      <div className="columns-2 gap-2 [column-fill:_balance] md:columns-2">
+      <div className="columns-2 gap-2.5 [column-fill:_balance] md:columns-2">
         {thumbs.map((t, idx) => (
-          <div key={t.title} className="relative mb-2 break-inside-avoid overflow-hidden rounded-lg border border-white/10 bg-neutral-900/30">
+          <div key={t.title} className="relative mb-2.5 break-inside-avoid overflow-hidden rounded-lg border border-white/10 bg-neutral-900/30">
             <button type="button" onClick={() => openAt(idx)} className="group block w-full cursor-pointer focus:ring-2 focus:ring-white/30 focus:outline-none" aria-label={`Open ${t.title}`}>
               <img src={t.images[0]} alt={t.title} loading="lazy" decoding="async" className="h-auto w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.02]" />
             </button>
@@ -79,7 +78,7 @@ export default function ProjectPreview() {
         ))}
       </div>
 
-      <LightboxModal
+      <LightBoxModal
         open={open}
         src={thumbs[projectIndex].images[imageIndex]}
         alt={thumbs[projectIndex].title}
