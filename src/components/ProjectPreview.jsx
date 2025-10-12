@@ -55,11 +55,11 @@ export default function ProjectPreview() {
 
   return (
     <section aria-label="Project Preview" className="mb-20">
-      <div className="mb-4 flex flex-col gap-1">
-        <h2 className="text-base text-neutral-50">Projects</h2>
-        <p className="mb-4">
-          This site is an ongoing experiment, so things <span className="text-neutral-400 line-through decoration-1">might</span> will break. Feel free to reach out via{' '}
-          <ExternalLink href="mailto:hello@javierlo.com">Email</ExternalLink> or <ExternalLink href="https://www.linkedin.com/in/javierlo">LinkedIn</ExternalLink> for case studies.
+      <div className="mb-6 flex flex-col gap-1">
+        <h2 className="mb-4 text-base text-neutral-50">Projects</h2>
+        <p>
+          This site is an ongoing experiment, so things <span className="text-neutral-400 line-through decoration-1">might</span> will break. Check out some selected work below, or get in touch if
+          you'd like to read case studies.
         </p>
       </div>
 

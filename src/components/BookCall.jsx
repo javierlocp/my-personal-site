@@ -14,12 +14,21 @@ export default function BookCall() {
 
   return (
     <button
-      className="mb-22 inline-block rounded-full bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-900 transition-transform hover:cursor-pointer hover:bg-gray-300 active:scale-90"
+      className="mt-6 mb-22 flex items-center gap-1 rounded-full bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-900 transition-transform hover:cursor-pointer hover:bg-gray-300 active:scale-90"
       data-cal-namespace="book-a-call"
       data-cal-link="javierlo/book-a-call"
       data-cal-config='{"layout":"month_view"}'
     >
-      Book a Call
+      <span
+        aria-hidden
+        className="relative inline-block size-2 rounded-full bg-green-500 before:absolute before:inset-0 before:animate-ping before:rounded-full before:bg-green-400 before:opacity-75 before:content-['']"
+      />
+
+      <div className="flex items-center">
+        <span className="px-2">Available</span>
+        <div className="h-4 w-px bg-gradient-to-b from-transparent via-gray-400/70 to-transparent" />
+        <span className="px-2">Let's Connect</span>
+      </div>
     </button>
   );
 }
