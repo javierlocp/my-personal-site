@@ -1,5 +1,5 @@
 import { ExternalLink } from '.'; //import directly from barrel file
-import LightboxModal from './LightboxModal';
+import LightboxModal from './LightBoxModal';
 import { useState } from 'react';
 
 const thumbs = [
