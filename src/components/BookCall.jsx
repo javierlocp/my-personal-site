@@ -14,7 +14,7 @@ export default function BookCall() {
 
   return (
     <button
-      className="inline-block rounded-full bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-900 transition-transform hover:cursor-pointer hover:bg-gray-300 active:scale-90"
+      className="mb-22 inline-block rounded-full bg-gray-100 px-5 py-3 text-sm font-semibold text-gray-900 transition-transform hover:cursor-pointer hover:bg-gray-300 active:scale-90"
       data-cal-namespace="book-a-call"
       data-cal-link="javierlo/book-a-call"
       data-cal-config='{"layout":"month_view"}'
