@@ -4,12 +4,12 @@ import { useState } from 'react';
 const thumbs = [
   {
     title: 'Doremi Finance - WIP',
-    images: ['/showcase/doremi/doremi-landing.png', '/showcase/doremi/doremi-hero.png', '/showcase/doremi/doremi-feature.png', '/showcase/doremi/logo-animation.mp4'],
+    images: ['/showcase/doremi/doremi-hero.png', '/showcase/doremi/doremi-feature.png', '/showcase/doremi/logo-animation.mp4', '/showcase/doremi/doremi-landing-vid.mp4'],
     wip: true, // WIP tag
   },
   {
     title: 'Neptune App: Solana Riptide 22',
-    images: ['/showcase/neptune.png'],
+    images: ['/showcase/design-exp/neptune.png'],
     visit: { href: 'https://solana.com/news/riptide-hackathon-winners-solana', label: 'Visit' }, // With Visit Link
   },
   {
@@ -71,13 +71,16 @@ export default function ProjectPreview() {
 
       <div className="columns-2 gap-2.5 [column-fill:_balance] md:columns-2">
         {thumbs.map((t, idx) => (
-          <div key={t.title} className="relative mb-2.5 break-inside-avoid overflow-hidden rounded-lg border border-white/10 bg-neutral-900/30">
-            <button type="button" onClick={() => openAt(idx)} className="group block w-full cursor-pointer focus:ring-2 focus:ring-white/30 focus:outline-none" aria-label={`Open ${t.title}`}>
+          <div key={t.title} className="relative mb-2.5 break-inside-avoid">
+            <button
+              type="button"
+              onClick={() => openAt(idx)}
+              className="group block w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
+              aria-label={`Open ${t.title}`}
+            >
               <img src={t.images[0]} alt={t.title} loading="lazy" decoding="async" className="h-auto w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.02]" />
             </button>
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/5 to-transparent px-2 py-4 text-center text-xs font-medium text-neutral-100 italic backdrop-blur-2xl">
-              {t.title}
-            </div>
+            <div className="px-1 py-2 text-[12px] text-neutral-400 italic">{t.title}</div>
           </div>
         ))}
       </div>

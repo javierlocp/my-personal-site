@@ -138,11 +138,11 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
             {link.label || 'Visit'}
           </a>
         ) : wip ? (
-          <div className="pointer-events-none absolute top-6 right-20 rounded-full bg-black px-4 py-2 text-sm text-white">W.I.P</div>
+          <div className="pointer-events-none absolute top-6 right-6 rounded-full bg-black px-4 py-2 text-sm text-white">W.I.P</div>
         ) : null}
 
         {/* Close */}
-        <button onClick={onClose} className="absolute top-6 right-6 cursor-pointer rounded-full bg-white/20 p-2 transition-all hover:bg-white/80 hover:text-black active:scale-80" aria-label="Close">
+        <button onClick={onClose} className="absolute -top-15 right-0 cursor-pointer rounded-full bg-white/20 p-2 transition-all hover:bg-white/80 hover:text-black active:scale-80" aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" className="text-black">
             <path d="M5.571 21H3v-2.571h2.571V21ZM21 21h-2.571v-2.571H21V21Zm-10.286-5.143h-2.57v2.572H5.57v-2.572h2.572v-2.57h2.57v2.57Zm7.715 2.572h-2.572v-2.572h2.572v2.572Zm-2.572-2.572h-2.57v-2.57h2.57v2.57Zm-2.572-2.57h-2.571v-2.573h2.571v2.572ZM8.144 8.142h2.57v2.57H8.143v-2.57H5.57V5.57h2.573v2.572Zm7.713 2.57h-2.57v-2.57h2.57v2.57Zm2.572-2.57h-2.572V5.57h2.572v2.572ZM5.57 5.57H3V3h2.571v2.571Zm15.429 0h-2.571V3H21v2.571Z" />
           </svg>
