@@ -95,7 +95,7 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
         'fixed inset-0 z-[9999] grid place-items-center', // backdrop fade
         'transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]',
         'bg-zinc-950/80',
-        visible ? 'opacity-100' : 'opacity-0',
+        visible ? 'opacity-100' : 'scale-90 opacity-0',
         'motion-reduce:transition-none', // respect reduced motion
       ].join(' ')}
     >
@@ -104,7 +104,7 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
           'relative will-change-transform',
           // image container fade + scale
           'transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]',
-          visible ? 'scale-100 opacity-100' : 'scale-95 opacity-0',
+          visible ? 'scale-100 opacity-100' : 'scale-90 opacity-0',
           'motion-reduce:transition-none',
         ].join(' ')}
       >

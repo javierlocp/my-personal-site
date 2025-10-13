@@ -14,7 +14,11 @@ const thumbs = [
   },
   {
     title: 'Custom Icons',
-    images: ['/showcase/tr-assets.png'],
+    images: ['/showcase/design-exp/tr-assets.png'],
+  },
+  {
+    title: 'Epicenter',
+    images: ['/showcase/design-exp/epicenter.png'],
   },
 ];
 
@@ -58,8 +62,8 @@ export default function ProjectPreview() {
       <div className="mb-6 flex flex-col gap-1">
         <h2 className="mb-4 text-base text-neutral-50">Projects</h2>
         <p>
-          This site is an ongoing experiment, so things <span className="text-neutral-400 line-through decoration-1">might</span> will break. Check out some selected work and design explorations
-          below, or get in touch if you'd like to read case studies.
+          This site is an ongoing experiment, so things <span className="text-neutral-400 line-through decoration-1">might</span> will break. Check out some my work and design explorations below, or
+          get in touch if you'd like to read case studies.
         </p>
       </div>
 
@@ -71,7 +75,7 @@ export default function ProjectPreview() {
             <button type="button" onClick={() => openAt(idx)} className="group block w-full cursor-pointer focus:ring-2 focus:ring-white/30 focus:outline-none" aria-label={`Open ${t.title}`}>
               <img src={t.images[0]} alt={t.title} loading="lazy" decoding="async" className="h-auto w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.02]" />
             </button>
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent px-2 py-4 text-center text-xs font-medium text-neutral-100 italic backdrop-blur-lg">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/5 to-transparent px-2 py-4 text-center text-xs font-medium text-neutral-100 italic backdrop-blur-2xl">
               {t.title}
             </div>
           </div>
