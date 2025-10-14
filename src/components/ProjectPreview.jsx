@@ -17,12 +17,12 @@ const thumbs = [
     images: ['/showcase/design-exp/tr-assets.png'],
   },
   {
-    title: 'Epicenter',
-    images: ['/showcase/design-exp/epicenter.png'],
+    title: 'Micro-animations',
+    images: ['/showcase/ai/motion.png', '/showcase/ai/making-manus-fast.mp4'],
   },
   {
-    title: 'Making AI "Feel" Fast',
-    images: ['/showcase/ai/ai-cover.png', '/showcase/ai/making-manus-fast.mp4'],
+    title: 'Epicenter',
+    images: ['/showcase/design-exp/epicenter.png'],
   },
 ];
 
@@ -84,7 +84,7 @@ export default function ProjectPreview() {
             >
               <img src={t.images[0]} alt={t.title} loading="lazy" decoding="async" className="h-auto w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.02]" />
             </button>
-            <div className="px-1 py-2 text-[12px] text-neutral-400 italic">{t.title}</div>
+            <div className="px-2 py-2 text-[12px] text-neutral-400 italic">{t.title}</div>
           </div>
         ))}
       </div>
