@@ -24,7 +24,7 @@ const BlogPreview = () => {
                 className="-mx-4 flex flex-col gap-1.5 rounded-md px-4 py-3 text-base text-neutral-50 transition-all duration-250 hover:bg-stone-50/5 hover:text-neutral-50 active:bg-stone-50/5"
               >
                 <div className="flex items-center justify-between gap-4 md:gap-8">
-                  <h3 className="max-w-[320px] truncate md:max-w-[500px]">{post.title}</h3>
+                  <h4 className="max-w-[320px] truncate font-bold md:max-w-[500px]">{post.title}</h4>
                   <div className="block flex-grow border-t border-gray-400/25" />
                   <span className="shrink-0 font-mono text-xs text-neutral-400">
                     {new Date(post.date).toLocaleDateString('en-GB', {

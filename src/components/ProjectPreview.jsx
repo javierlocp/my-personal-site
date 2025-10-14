@@ -21,8 +21,8 @@ const thumbs = [
     images: ['/showcase/ai/motion.png', '/showcase/ai/making-manus-fast.mp4'],
   },
   {
-    title: 'Epicenter',
-    images: ['/showcase/design-exp/epicenter.png'],
+    title: 'Visual Experiments',
+    images: ['/showcase/design-exp/sound-visualization.png', '/showcase/design-exp/epicenter.png'],
   },
 ];
 
