@@ -20,6 +20,10 @@ const thumbs = [
     title: 'Epicenter',
     images: ['/showcase/design-exp/epicenter.png'],
   },
+  {
+    title: 'Making AI "Feel" Fast',
+    images: ['/showcase/ai/ai-cover.png', '/showcase/ai/making-manus-fast.mp4'],
+  },
 ];
 
 export default function ProjectPreview() {
