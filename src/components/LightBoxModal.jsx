@@ -121,7 +121,7 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
             className="block aspect-video max-h-[85vh] max-w-[90vw] rounded-lg select-none"
           />
         ) : (
-          <img src={src} alt={alt} className="block max-h-[85vh] max-w-[90vw] rounded-lg object-contain select-none" draggable={false} />
+          <img src={src} alt={alt} className="block aspect-3/2 max-h-[85vh] max-w-[90vw] rounded-lg object-contain select-none" draggable={false} />
         )}
 
         {/* Visit / WIP Tag link (optional conditional) */}
