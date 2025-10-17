@@ -60,7 +60,7 @@ This is separate from company Office Hour. This is where you set your internal d
 - Weekly Show & Tell
 - Individual or Group feedback session
 - Review and unblock design decisions
-- One fun thing you can do: Pick 1 member each week and decide to work on their timezone
+- One fun thing you can do: Pick 1 member each week and decide to work in their timezone
 
 ### One lead per project
 
