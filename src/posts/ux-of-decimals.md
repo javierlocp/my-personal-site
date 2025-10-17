@@ -41,7 +41,7 @@ Minimum Significant Decimals refers to the smallest number of decimal places tha
 
 ### Always display a minimum number of decimals
 
-Example: **1.150000 ETH** instead of **1.15 ETH** — this avoids the impression of rounding uncertainty.
+Example: **1.150000 ETH** instead of **1.15 ETH**, this avoids the impression of rounding uncertainty.
 
 ### Set a maximum number of decimals
 

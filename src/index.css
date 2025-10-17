@@ -64,7 +64,10 @@
       @apply list-inside list-decimal;
     }
     ul {
-      @apply list-inside list-disc;
+      @apply mb-8 list-inside list-disc;
+    }
+    li {
+      @apply mb-4;
     }
     code {
       @apply rounded-md border border-neutral-950 bg-neutral-800 px-1.5 py-0.5 font-mono text-xs font-medium text-neutral-50;
