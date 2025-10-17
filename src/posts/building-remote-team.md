@@ -21,9 +21,9 @@ In my experience, there are two primary things that you should consider:
 
 Let's start with the non-negotiables.
 
-## Non-negotiable
+## Non-negotiables
 
-This may apply to any team, but they’re especially critical for remote teams and should be communicated to new or potential hires.
+This may apply to any work settings, but they’re especially critical for remote teams and should be communicated to new or potential hires.
 
 - Office hour
 - Communications standards
