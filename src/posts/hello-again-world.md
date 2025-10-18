@@ -3,7 +3,7 @@ title: Hello Again, World
 slug: hello-again-world
 date: 2025-06-30
 description: A reflection on my journey as a product designer and the path forward
-image: /blog/hello-world.png
+image: /blog/hello-world/hello-world.png
 readingTime: 4
 tags: ['design', 'process', 'lessons']
 ---
