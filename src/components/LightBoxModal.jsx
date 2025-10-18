@@ -138,7 +138,7 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
             {link.label || 'Visit'}
           </a>
         ) : wip ? (
-          <div className="pointer-events-none absolute top-6 right-6 rounded-full bg-black px-4 py-2 text-sm text-white">W.I.P</div>
+          <div className="pointer-events-none absolute top-6 right-6 rounded-full bg-black px-4 py-2 text-sm text-white">W.I.P - 🚧 Building</div>
         ) : null}
 
         {/* Close */}
