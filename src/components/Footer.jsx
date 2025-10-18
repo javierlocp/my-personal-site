@@ -16,7 +16,7 @@ const Footer = () => {
             </ExternalLink>{' '}
             <br />
             <ExternalLink className="text-sm text-neutral-400" href="/public-key.txt">
-              My GPG Pub Key
+              My GPG Public Key
             </ExternalLink>
           </p>
 
