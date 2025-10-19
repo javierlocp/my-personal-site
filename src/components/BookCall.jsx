@@ -25,7 +25,7 @@ export default function BookCall() {
       />
 
       <div className="flex items-center">
-        <span className="px-2">Open for new opportunity</span>
+        <span className="px-2">Open for new opportunities</span>
         {/* <div className="h-4 w-px bg-gradient-to-b from-transparent via-gray-400/70 to-transparent" />
         <span className="px-2">Let's Talk</span> */}
       </div>
