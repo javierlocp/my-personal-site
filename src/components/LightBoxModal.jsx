@@ -132,7 +132,7 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="absolute top-6 right-20 cursor-pointer rounded-full bg-white px-4 py-2 text-black transition-all hover:bg-white/80 hover:text-black active:scale-90"
+            className="absolute top-6 right-6 cursor-pointer rounded-full bg-white px-4 py-2 text-black transition-all hover:bg-white/80 hover:text-black active:scale-90"
             aria-label={link.label || 'Visit link (opens in new tab)'}
           >
             {link.label || 'Visit'}

@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import matter from 'gray-matter';
@@ -35,25 +35,31 @@ const BlogPost = () => {
   }
 
   return (
-    <article>
-      <span className="mb-4 inline-block font-mono text-xs text-neutral-400">
-        {new Date(post.date).toLocaleDateString('en-GB', {
-          weekday: 'long',
-          day: 'numeric',
-          month: 'numeric',
-          year: 'numeric',
-        })}
-        {post.readingTime && ` · ${post.readingTime} min read`}
-      </span>
-      <div className="flex flex-col gap-2">
-        <h1>{post.title}</h1>
-        <p className="text-pretty">{post.description}</p>
-      </div>
-      <div className="my-8 text-sm text-neutral-400">{post.image && <img src={post.image} alt={post.title} className="aspect-3/2 h-auto w-full rounded-lg" loading="lazy" />}</div>
-      <div className="md-content-style">
-        <ReactMarkdown>{content}</ReactMarkdown>
-      </div>
-    </article>
+    <>
+      <article>
+        <span className="mb-4 flex items-center gap-5 font-mono text-xs text-neutral-400">
+          <Link to="/blog" className="hover:text-white">
+            Back to All Writings
+          </Link>
+          <div className="h-4 w-px bg-gradient-to-b from-transparent via-gray-400/70 to-transparent" />
+          {new Date(post.date).toLocaleDateString('en-GB', {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'numeric',
+            year: 'numeric',
+          })}
+          {post.readingTime && ` · ${post.readingTime} min read`}
+        </span>
+        <div className="flex flex-col gap-2">
+          <h1>{post.title}</h1>
+          <p className="text-pretty">{post.description}</p>
+        </div>
+        <div className="my-8 text-sm text-neutral-400">{post.image && <img src={post.image} alt={post.title} className="aspect-3/2 h-auto w-full rounded-lg" loading="lazy" />}</div>
+        <div className="md-content-style">
+          <ReactMarkdown>{content}</ReactMarkdown>
+        </div>
+      </article>
+    </>
   );
 };
 
