@@ -65,10 +65,7 @@ export default function ProjectPreview() {
     <section aria-label="Project Preview" className="mb-20">
       <div className="mb-6 flex flex-col gap-1">
         <h2 className="mb-4 text-base text-neutral-50">Projects</h2>
-        <p>
-          This site is an ongoing experiment, so things <span className="text-neutral-400 line-through decoration-1">might</span> will break. Check out some my work and design explorations below, or
-          get in touch if you'd like to read case studies.
-        </p>
+        <p>Check out some my work and design explorations below, or get in touch if you'd like to read full case studies.</p>
       </div>
 
       {/* Project Gallery Grid */}
