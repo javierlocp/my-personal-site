@@ -34,7 +34,7 @@ This is a must in any remote team. There needs to be a shared time window where 
 
 ### Communications
 
-In a full remote settings, clear and open communications should your team's operating principles.
+In a full remote settings, clear and open communications should be your team's operating principles.
 
 We use Slack as our main communication tools but any team messaging tools should work:
 
