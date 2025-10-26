@@ -129,16 +129,19 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
         {/* Visit + WIP badges */}
         {(link?.href || wip) && (
           <div className="absolute top-6 right-6 flex items-center gap-3">
-            {wip && <span className="rounded-full bg-black px-4 py-2 text-xs font-medium text-white/90">Work in progress</span>}
+            {wip && <span className="rounded-full bg-black px-5 py-2.5 text-xs font-medium text-white/90">Work in progress</span>}
             {link?.href && (
               <a
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-black transition-all hover:bg-white/80 active:scale-90"
+                className="flex self-center rounded-full bg-white px-5 py-2.5 text-xs font-semibold text-black drop-shadow-lg transition-all hover:bg-white/80 active:scale-90"
               >
-                {link.label || 'Visit'}
+                {link.label || 'Visit'}{' '}
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 48 48" className="ml-0.5 inline-block h-3.5 w-3.5">
+                  <path d="M14 38h-4v-4h4v4Zm4-4h-4v-4h4v4Zm20 0h-4V18h-4v-4H14v-4h24v24Zm-16-4h-4v-4h4v4Zm4-4h-4v-4h4v4Zm4-4h-4v-4h4v4Z" />
+                </svg>
               </a>
             )}
           </div>
