@@ -126,20 +126,23 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
 
         {/* Visit / WIP Tag link (optional conditional) */}
 
-        {link?.href ? (
-          <a
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="absolute top-6 right-6 cursor-pointer rounded-full bg-white px-4 py-2 text-black transition-all hover:bg-white/80 hover:text-black active:scale-90"
-            aria-label={link.label || 'Visit link (opens in new tab)'}
-          >
-            {link.label || 'Visit'}
-          </a>
-        ) : wip ? (
-          <div className="pointer-events-none absolute top-6 right-6 rounded-full bg-black px-4 py-2 text-sm text-white">W.I.P - 🚧 Building</div>
-        ) : null}
+        {/* Visit + WIP badges */}
+        {(link?.href || wip) && (
+          <div className="absolute top-6 right-6 flex items-center gap-3">
+            {wip && <span className="rounded-full bg-black px-4 py-2 text-xs font-medium text-white/90">Work in progress</span>}
+            {link?.href && (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-black transition-all hover:bg-white/80 active:scale-90"
+              >
+                {link.label || 'Visit'}
+              </a>
+            )}
+          </div>
+        )}
 
         {/* Close */}
         <button onClick={onClose} className="absolute -top-15 right-0 cursor-pointer rounded-full bg-white/20 p-2 transition-all hover:bg-white/80 hover:text-black active:scale-80" aria-label="Close">
