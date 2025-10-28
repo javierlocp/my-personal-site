@@ -15,11 +15,6 @@ const thumbs = [
     visit: { href: 'https://doremi-landing-ui.vercel.app/', label: 'Visit' }, // With Visit Link
   },
   {
-    title: 'Neptune App: Solana Riptide 22',
-    images: ['/showcase/design-exp/neptune.png'],
-    visit: { href: 'https://solana.com/news/riptide-hackathon-winners-solana', label: 'Visit' }, // With Visit Link
-  },
-  {
     title: 'Custom Icons',
     images: ['/showcase/design-exp/tr-assets.png'],
   },
@@ -27,10 +22,16 @@ const thumbs = [
     title: 'Micro-animations',
     images: ['/showcase/ai/motion.png', '/showcase/ai/making-manus-fast.mp4'],
   },
-  {
-    title: 'Visual Experiments',
-    images: ['/showcase/design-exp/sound-visualization.png', '/showcase/design-exp/epicenter.png'],
-  },
+
+  // {
+  //   title: 'Visual Experiments',
+  //   images: ['/showcase/design-exp/sound-visualization.png', '/showcase/design-exp/epicenter.png'],
+  // },
+  // {
+  //   title: 'Neptune App: Solana Riptide 22',
+  //   images: ['/showcase/design-exp/neptune.png'],
+  //   visit: { href: 'https://solana.com/news/riptide-hackathon-winners-solana', label: 'Visit' }, // With Visit Link
+  // },
 ];
 
 export default function ProjectPreview() {
@@ -83,12 +84,15 @@ export default function ProjectPreview() {
             <button
               type="button"
               onClick={() => openAt(idx)}
-              className="group block w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
+              className="group block w-full cursor-pointer overflow-hidden focus:ring-2 focus:ring-white/30 focus:outline-none"
               aria-label={`Open ${t.title}`}
             >
               <img src={t.images[0]} alt={t.title} loading="lazy" decoding="async" className="h-auto w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.02]" />
+              {/* hover title */}
+              <div className="absolute bottom-4 left-4 translate-y-1 rounded-sm bg-neutral-50/90 px-2 py-1 text-[12px] text-neutral-950 italic opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                {t.title}
+              </div>
             </button>
-            <div className="px-2 py-2 text-[12px] text-neutral-400 italic">{t.title}</div>
           </div>
         ))}
       </div>
