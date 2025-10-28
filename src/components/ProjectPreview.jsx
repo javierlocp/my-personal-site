@@ -4,7 +4,13 @@ import { useState } from 'react';
 const thumbs = [
   {
     title: 'Doremi Finance - Building',
-    images: ['/showcase/doremi/doremi-hero.png', '/showcase/doremi/doremi-feature.png', '/showcase/doremi/logo-animation.mp4', '/showcase/doremi/doremi-landing-vid.mp4'],
+    images: [
+      '/showcase/doremi/doremi-hero.png',
+      '/showcase/doremi/doremi-feature.png',
+      '/showcase/doremi/doremi-compare-fees.png',
+      '/showcase/doremi/doremi-landing-vid.mp4',
+      '/showcase/doremi/logo-animation.mp4',
+    ],
     wip: true, // WIP tag
     visit: { href: 'https://doremi-landing-ui.vercel.app/', label: 'Visit' }, // With Visit Link
   },
