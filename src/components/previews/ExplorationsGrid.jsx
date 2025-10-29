@@ -1,7 +1,6 @@
 import LightBoxModal from '../modals/LightBoxModal'; //import directly from barrel file
+import { explorations as thumbs, isVideo } from '@/explorations';
 import { useEffect, useRef, useState } from 'react';
-
-const isVideo = (src) => /\.(mp4|webm|ogg|mov|m4v)$/i.test(src);
 
 function VideoThumb({ src, poster, className }) {
   const holderRef = useRef(null); // stable element to observe
@@ -54,40 +53,6 @@ function VideoThumb({ src, poster, className }) {
   );
 }
 
-const thumbs = [
-  {
-    title: 'Doremi Finance - Building',
-    images: [
-      '/showcase/doremi/doremi-landing-vid.mp4',
-      '/showcase/doremi/doremi-hero.png',
-      '/showcase/doremi/doremi-feature.png',
-      '/showcase/doremi/doremi-compare-fees.png',
-      '/showcase/doremi/logo-animation.mp4',
-    ],
-    wip: true, // WIP tag
-    visit: { href: 'https://doremi-landing-ui.vercel.app/', label: 'Visit' }, // With Visit Link
-  },
-  {
-    title: 'Custom Icons',
-    images: ['/showcase/design-exp/tr-assets.png'],
-  },
-  {
-    title: 'Micro-animations',
-    images: ['/showcase/ai/making-manus-fast.mp4'],
-    poster: ['/showcase/ai/motion.png'],
-  },
-
-  // {
-  //   title: 'Visual Experiments',
-  //   images: ['/showcase/design-exp/sound-visualization.png', '/showcase/design-exp/epicenter.png'],
-  // },
-  // {
-  //   title: 'Neptune App: Solana Riptide 22',
-  //   images: ['/showcase/design-exp/neptune.png'],
-  //   visit: { href: 'https://solana.com/news/riptide-hackathon-winners-solana', label: 'Visit' }, // With Visit Link
-  // },
-];
-
 export default function ProjectPreview() {
   const [open, setOpen] = useState(false);
   const [projectIndex, setProjectIndex] = useState(0);
@@ -127,7 +92,7 @@ export default function ProjectPreview() {
     <section aria-label="Project Preview" className="mb-20">
       <div className="mb-10 flex flex-col">
         <h2 className="mb-4 text-base text-neutral-50">Explorations</h2>
-        <p>Check out some my design explorations below, or get in touch if you'd like to read full case studies.</p>
+        <p>Check out some of my design explorations below, or get in touch if you'd like to read full case studies.</p>
       </div>
 
       {/* Project Gallery Grid */}
