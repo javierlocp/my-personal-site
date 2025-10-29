@@ -7,7 +7,7 @@ const Navbar = () => {
         <Link to="/" className="font-semibold text-neutral-50">
           Javier Lo
         </Link>
-        <span className="text-sm text-neutral-500 md:text-base">Product Design Leader</span>
+        <span className="text-sm text-neutral-500 md:text-base">Product Designer</span>
       </div>
       <nav className="flex gap-4 text-sm">
         <Link to="/">Home</Link>

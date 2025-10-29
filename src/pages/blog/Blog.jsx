@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAllPosts } from '../../lib/getPosts';
+import { getAllPosts } from '@/lib/getPosts';
 import { Link } from 'react-router-dom';
 
 // Blog Index

@@ -1,4 +1,4 @@
-import { BlogPreview, ExternalLink, ProjectPreview, BookCall } from '../components/index';
+import { BlogPreview, ExternalLink, ProjectPreview, BookCall } from '@/components/index';
 const Home = () => {
   return (
     <>

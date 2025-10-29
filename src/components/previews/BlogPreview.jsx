@@ -1,13 +1,14 @@
-// import post
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getAllPosts } from '../lib/getPosts';
+import { getAllPosts } from '../../lib/getPosts';
+
+// This is a component where I import the most recent 4 posts and show it in Home Page.
 
 const BlogPreview = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    setPosts(getAllPosts().slice(0, 3));
+    setPosts(getAllPosts().slice(0, 4));
   }, []);
 
   return (

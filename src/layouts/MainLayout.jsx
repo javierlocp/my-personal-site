@@ -1,4 +1,4 @@
-import { Navbar, Footer } from '../components';
+import { Navbar, Footer } from '@/components';
 
 /*
   MainLayout is the default layout for this site.
@@ -8,7 +8,7 @@ import { Navbar, Footer } from '../components';
 const MainLayout = ({ children }) => {
   return (
     <>
-      <div className="mx-auto max-w-[640px] overflow-x-hidden px-6 py-12">
+      <div className="mx-auto max-w-[640px] px-6 py-12">
         <Navbar />
         <main>{children}</main>
         <Footer />
