@@ -122,7 +122,7 @@ export default function ProjectPreview() {
                   />
                 )}
                 {/* hover title */}
-                <div className="absolute bottom-4 left-4 translate-y-1 rounded-sm bg-neutral-50/90 px-2 py-1 text-[12px] text-neutral-950 italic opacity-0 transition-all duration-300 ease-out group-hover/thumbnail:translate-y-0 group-hover/thumbnail:opacity-100">
+                <div className="absolute bottom-4 left-4 translate-y-1 rounded-sm bg-neutral-50/90 px-2 py-1 text-[12px] text-neutral-950 italic opacity-0 transition-all duration-200 ease-out group-hover/thumbnail:translate-y-0 group-hover/thumbnail:opacity-100">
                   {t.title}
                 </div>
               </button>
