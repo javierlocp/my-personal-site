@@ -22,9 +22,8 @@ My primary goals:
 - [ ] Learn Basic React
   - [x] Basic principles
   - [x] Folder structures
-  - [ ] Components and Props 👈 ~~I am currently here!~~ 😩This s@!t is hard!
-  - [ ] Best practices
-
+  - [x] Components and Props 👈 ~~I am currently here!~~ 😩This s@!t is hard!
+  - [x] Best practices - improve file structures
 - Tech Stack (Highlevel):
   - [x] Tailwind
   - [x] Install Tailwind Prettier
@@ -50,9 +49,8 @@ Blog
 - [x] Extract blog post sort logic into a utility function
 - [x] Install `gray-matter` to parse front-matter from \*.md files
 - [x] Install nodePolyfills due to Buffer not being supported in Vite + React [Read Here](https://www.npmjs.com/package/vite-plugin-node-polyfills)
-- [ ] Loading states for blog fetch
 
-- [ ] Syntax Highlighting
+- [ ] Syntax Highlighting - MDX
 - [ ] Long term CMS options?
 
 Project Showcase
@@ -63,7 +61,3 @@ Project Showcase
 Newsletter
 
 - [ ] Investigate Newsletter Feature
-
-About Page (Optional)
-
-- [ ] Create About Page
