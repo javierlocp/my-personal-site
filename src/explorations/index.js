@@ -14,22 +14,22 @@ export const explorations = [
   {
     title: 'Doremi Finance — Building',
     images: [
-      '/showcase/doremi/doremi-landing-vid.mp4',
-      '/showcase/doremi/doremi-hero.png',
-      '/showcase/doremi/doremi-feature.png',
-      '/showcase/doremi/doremi-compare-fees.png',
-      '/showcase/doremi/logo-animation.mp4',
+      '/showcase/explorations/doremi/doremi-landing-vid.mp4',
+      '/showcase/explorations/doremi/doremi-hero.png',
+      '/showcase/explorations/doremi/doremi-feature.png',
+      '/showcase/explorations/doremi/doremi-compare-fees.png',
+      '/showcase/explorations/doremi/logo-animation.mp4',
     ],
     wip: true, // WIP tag
     visit: { href: 'https://doremi-landing-ui.vercel.app/', label: 'Visit' }, // With Visit Link
   },
   {
     title: 'Custom Icons',
-    images: ['/showcase/design-exp/tr-assets.png'],
+    images: ['/showcase/explorations/design-exp/tr-assets.png'],
   },
   {
     title: 'Micro-animations',
-    images: ['/showcase/ai/making-manus-fast.mp4'],
-    poster: '/showcase/ai/motion.png',
+    images: ['/showcase/explorations/ai/making-manus-fast.mp4'],
+    poster: '/showcase/explorations/ai/motion.png',
   },
 ];
