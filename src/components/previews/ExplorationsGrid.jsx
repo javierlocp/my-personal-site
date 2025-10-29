@@ -107,7 +107,7 @@ export default function ProjectPreview() {
               <button
                 type="button"
                 onClick={() => openAt(idx)}
-                className="group/thumbnail relative block aspect-video w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
+                className="group/thumbnail relative block aspect-video w-full cursor-pointer overflow-hidden rounded-2xl focus:ring-2 focus:ring-white/30 focus:outline-none"
                 aria-label={`Open ${t.title}`}
               >
                 {video ? (
@@ -123,7 +123,7 @@ export default function ProjectPreview() {
                 )}
 
                 {/* hover title */}
-                <div className="pointer-events-none absolute bottom-4 left-4 translate-y-1 rounded-sm bg-neutral-50/90 px-2 py-1 text-[12px] text-neutral-950 italic opacity-0 transition-all duration-200 ease-out group-hover/thumbnail:translate-y-0 group-hover/thumbnail:opacity-100">
+                <div className="pointer-events-none absolute bottom-3 left-3 translate-y-1 rounded-sm bg-neutral-50/90 px-2 py-1 text-xs text-neutral-950 opacity-0 transition-all duration-200 ease-out group-hover/thumbnail:translate-y-0 group-hover/thumbnail:opacity-100">
                   {t.title}
                 </div>
               </button>

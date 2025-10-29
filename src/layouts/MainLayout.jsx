@@ -8,7 +8,7 @@ import { Navbar, Footer } from '@/components';
 const MainLayout = ({ children }) => {
   return (
     <>
-      <div className="mx-auto max-w-[640px] px-8 py-12">
+      <div className="mx-auto max-w-[640px] px-5 py-12">
         <Navbar />
         <main>{children}</main>
         <Footer />
