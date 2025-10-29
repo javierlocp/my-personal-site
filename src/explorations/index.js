@@ -18,7 +18,7 @@ export const explorations = [
       '/showcase/explorations/doremi/doremi-hero.png',
       '/showcase/explorations/doremi/doremi-feature.png',
       '/showcase/explorations/doremi/doremi-compare-fees.png',
-      '/showcase/explorations/doremi/logo-animation.mp4',
+      // '/showcase/explorations/doremi/logo-animation.mp4',
     ],
     wip: true, // WIP tag
     visit: { href: 'https://doremi-landing-ui.vercel.app/', label: 'Visit' }, // With Visit Link

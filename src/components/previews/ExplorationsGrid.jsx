@@ -97,7 +97,7 @@ export default function ProjectPreview() {
 
       {/* Project Gallery Grid */}
 
-      <div className="columns-1 gap-2.5 [column-fill:_balance] md:columns-2 lg:-mx-8">
+      <div className="columns-1 gap-2.5 [column-fill:_balance]">
         {thumbs.map((t, idx) => {
           const first = t.images[0];
           const video = isVideo(first);
@@ -107,22 +107,23 @@ export default function ProjectPreview() {
               <button
                 type="button"
                 onClick={() => openAt(idx)}
-                className="group/thumbnail block aspect-video w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
+                className="group/thumbnail relative block aspect-video w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
                 aria-label={`Open ${t.title}`}
               >
                 {video ? (
-                  <VideoThumb src={first} poster={t.poster} className="h-auto w-full object-contain transition-transform duration-200 ease-out group-hover/thumbnail:scale-[1.1]" />
+                  <VideoThumb src={first} poster={t.poster} className="absolute inset-0 h-full w-full object-contain transition-transform duration-300 ease-out group-hover/thumbnail:scale-[1.02]" />
                 ) : (
                   <img
                     src={first}
                     alt={t.title}
                     loading="lazy"
                     decoding="async"
-                    className="h-auto w-full object-contain transition-transform duration-200 ease-out group-hover/thumbnail:scale-[1.1]"
+                    className="absolute inset-0 h-full w-full object-contain transition-transform duration-300 ease-out group-hover/thumbnail:scale-[1.02]"
                   />
                 )}
+
                 {/* hover title */}
-                <div className="absolute bottom-4 left-4 translate-y-1 rounded-sm bg-neutral-50/90 px-2 py-1 text-[12px] text-neutral-950 italic opacity-0 transition-all duration-200 ease-out group-hover/thumbnail:translate-y-0 group-hover/thumbnail:opacity-100">
+                <div className="pointer-events-none absolute bottom-4 left-4 translate-y-1 rounded-sm bg-neutral-50/90 px-2 py-1 text-[12px] text-neutral-950 italic opacity-0 transition-all duration-200 ease-out group-hover/thumbnail:translate-y-0 group-hover/thumbnail:opacity-100">
                   {t.title}
                 </div>
               </button>
