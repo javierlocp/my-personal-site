@@ -132,7 +132,7 @@ export default function ProjectPreview() {
 
       {/* Project Gallery Grid */}
 
-      <div className="columns-2 gap-2.5 [column-fill:_balance] lg:-mx-32">
+      <div className="columns-1 gap-2.5 [column-fill:_balance] md:columns-2 lg:-mx-32">
         {thumbs.map((t, idx) => {
           const first = t.images[0];
           const video = isVideo(first);
