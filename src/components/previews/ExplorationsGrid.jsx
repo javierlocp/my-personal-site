@@ -111,14 +111,14 @@ export default function ProjectPreview() {
                 aria-label={`Open ${t.title}`}
               >
                 {video ? (
-                  <VideoThumb src={first} poster={t.poster} className="h-auto w-full object-contain transition-transform duration-300 ease-out group-hover/thumbnail:scale-[1.02]" />
+                  <VideoThumb src={first} poster={t.poster} className="h-auto w-full object-contain transition-transform duration-200 ease-out group-hover/thumbnail:scale-[1.1]" />
                 ) : (
                   <img
                     src={first}
                     alt={t.title}
                     loading="lazy"
                     decoding="async"
-                    className="h-auto w-full object-contain transition-transform duration-300 ease-out group-hover/thumbnail:scale-[1.02]"
+                    className="h-auto w-full object-contain transition-transform duration-200 ease-out group-hover/thumbnail:scale-[1.1]"
                   />
                 )}
                 {/* hover title */}
