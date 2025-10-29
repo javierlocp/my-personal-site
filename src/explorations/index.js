@@ -15,9 +15,9 @@ export const explorations = [
     title: 'Doremi Finance — Building',
     images: [
       '/showcase/explorations/doremi/doremi-landing-vid.mp4',
+      '/showcase/explorations/doremi/doremi-compare-fees.png',
       '/showcase/explorations/doremi/doremi-hero.png',
       '/showcase/explorations/doremi/doremi-feature.png',
-      '/showcase/explorations/doremi/doremi-compare-fees.png',
     ],
     wip: true, // WIP tag
     visit: { href: 'https://doremi-landing-ui.vercel.app/', label: 'Visit' }, // With Visit Link
@@ -28,7 +28,7 @@ export const explorations = [
   },
   {
     title: 'Micro-animations',
-    images: ['/showcase/explorations/ai/making-manus-fast.mp4'],
+    images: ['/showcase/explorations/ai/manus.mp4'],
     poster: '/showcase/explorations/ai/motion.png',
   },
 ];

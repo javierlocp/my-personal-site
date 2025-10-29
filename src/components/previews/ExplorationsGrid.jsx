@@ -107,7 +107,7 @@ export default function ProjectPreview() {
               <button
                 type="button"
                 onClick={() => openAt(idx)}
-                className="group/thumbnail relative block aspect-video w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
+                className="group/thumbnail relative block aspect-3/2 w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
                 aria-label={`Open ${t.title}`}
               >
                 {video ? (

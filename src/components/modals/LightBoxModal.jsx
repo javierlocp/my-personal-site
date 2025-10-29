@@ -124,7 +124,7 @@ export default function lightBoxModal({ open, src, alt = '', onClose, onPrev, on
             muted
             preload="metadata"
             aria-label={`${alt || 'Video'} (use space to play/pause)`}
-            className="block aspect-video max-h-[90vh] max-w-[90vw] rounded-lg select-none"
+            className="block max-h-[90vh] max-w-[90vw] rounded-lg select-none"
           />
         ) : (
           <img src={src} alt={alt} className="block max-h-[90vh] max-w-[90vw] rounded-lg object-contain select-none" draggable={false} />
