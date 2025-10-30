@@ -2,7 +2,7 @@ import LightBoxModal from '../modals/LightBoxModal'; //import directly from barr
 import { explorations as thumbs, isVideo } from '@/explorations';
 import { useEffect, useRef, useState } from 'react';
 
-function VideoThumb({ src, poster, className }) {
+function VideoThumb({ src, className }) {
   const videoRef = useRef(null);
   const [failed, setFailed] = useState(false);
 
@@ -15,7 +15,9 @@ function VideoThumb({ src, poster, className }) {
     v.playsInline = true;
 
     const tryPlay = () => {
-      v.play().catch(() => setFailed(true));
+      // On mobile Safari, play() may reject without a user gesture.
+      // We do NOT mark this as failed; just ignore and keep the video element.
+      v.play().catch(() => {});
     };
 
     if (v.readyState >= 2) tryPlay();
@@ -45,11 +47,26 @@ function VideoThumb({ src, poster, className }) {
   }, []);
 
   if (failed) {
-    return <img src={poster || '/fallback-thumb.jpg'} alt="" decoding="async" className={className} />;
+    return <div className={className + ' bg-black'} />;
   }
 
   return (
-    <video ref={videoRef} autoPlay muted loop playsInline preload="metadata" poster={poster} className={className} controls={false} disableRemotePlayback>
+    <video
+      ref={videoRef}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      className={className + ' bg-black'}
+      controls={false}
+      disableRemotePlayback
+      onError={() => setFailed(true)}
+      onLoadedMetadata={() => {
+        const v = videoRef.current;
+        if (v) v.play().catch(() => {});
+      }}
+    >
       <source src={src} type="video/mp4" />
     </video>
   );
@@ -113,7 +130,7 @@ export default function ExplorationsGrid() {
                 aria-label={`Open ${t.title}`}
               >
                 {video ? (
-                  <VideoThumb src={first} poster={t.poster} className="absolute inset-0 h-full w-full object-contain transition-transform duration-300 ease-out group-hover/thumbnail:scale-[1.02]" />
+                  <VideoThumb src={first} className="absolute inset-0 h-full w-full object-contain transition-transform duration-300 ease-out group-hover/thumbnail:scale-[1.02]" />
                 ) : (
                   <img
                     src={first}
