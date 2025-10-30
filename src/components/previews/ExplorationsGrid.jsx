@@ -3,57 +3,59 @@ import { explorations as thumbs, isVideo } from '@/explorations';
 import { useEffect, useRef, useState } from 'react';
 
 function VideoThumb({ src, poster, className }) {
-  const holderRef = useRef(null); // stable element to observe
   const videoRef = useRef(null);
-  const [inView, setInView] = useState(false);
-  const prefersReduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const [failed, setFailed] = useState(false);
 
-  useEffect(() => {
-    const el = holderRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver((entries) => entries.forEach((e) => setInView(e.isIntersecting)), { rootMargin: '200px' });
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
-  // Play/pause when visibility changes
+  // Try to autoplay as soon as the video can play
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
-    if (inView && !prefersReduced) v.play().catch(() => {});
-    else {
-      v.pause();
-      v.currentTime = 0;
-    }
-  }, [inView, prefersReduced]);
+    // Important for iOS Safari: set these before play()
+    v.muted = true;
+    v.playsInline = true;
+
+    const tryPlay = () => {
+      v.play().catch(() => setFailed(true));
+    };
+
+    if (v.readyState >= 2) tryPlay();
+    else v.addEventListener('canplay', tryPlay, { once: true });
+
+    return () => v.removeEventListener('canplay', tryPlay);
+  }, [src]);
+
+  // Pause when not visible; resume when in view
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      },
+      { rootMargin: '150px' }
+    );
+    io.observe(v);
+    return () => io.disconnect();
+  }, []);
+
+  if (failed) {
+    return <img src={poster || '/fallback-thumb.jpg'} alt="" decoding="async" className={className} />;
+  }
 
   return (
-    <div ref={holderRef} className="">
-      {/* keeps layout unchanged */}
-      {inView && !prefersReduced ? (
-        <video
-          ref={videoRef}
-          src={src}
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={poster}
-          className={className}
-          onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
-          onMouseLeave={(e) => {
-            e.currentTarget.pause();
-            e.currentTarget.currentTime = 0;
-          }}
-        />
-      ) : (
-        <img src={poster || '/fallback-thumb.jpg'} alt="" loading="lazy" decoding="async" className={className} />
-      )}
-    </div>
+    <video ref={videoRef} autoPlay muted loop playsInline preload="metadata" poster={poster} className={className} controls={false} disableRemotePlayback>
+      <source src={src} type="video/mp4" />
+    </video>
   );
 }
 
-export default function ProjectPreview() {
+export default function ExplorationsGrid() {
   const [open, setOpen] = useState(false);
   const [projectIndex, setProjectIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
@@ -107,7 +109,7 @@ export default function ProjectPreview() {
               <button
                 type="button"
                 onClick={() => openAt(idx)}
-                className="group/thumbnail relative block aspect-3/2 w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
+                className="group/thumbnail relative block aspect-[3/2] w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
                 aria-label={`Open ${t.title}`}
               >
                 {video ? (
