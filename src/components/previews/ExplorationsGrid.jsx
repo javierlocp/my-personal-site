@@ -46,6 +46,26 @@ function VideoThumb({ src, className }) {
     return () => io.disconnect();
   }, []);
 
+  // iOS safety: on first user gesture, try to play again (some builds require a gesture)
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    let done = false;
+    const kick = () => {
+      if (done) return;
+      done = true;
+      v.play().catch(() => {});
+      window.removeEventListener('touchstart', kick, true);
+      window.removeEventListener('mousedown', kick, true);
+    };
+    window.addEventListener('touchstart', kick, true);
+    window.addEventListener('mousedown', kick, true);
+    return () => {
+      window.removeEventListener('touchstart', kick, true);
+      window.removeEventListener('mousedown', kick, true);
+    };
+  }, []);
+
   if (failed) {
     return <div className={className + ' bg-black'} />;
   }
@@ -55,6 +75,7 @@ function VideoThumb({ src, className }) {
       ref={videoRef}
       autoPlay
       muted
+      defaultMuted
       loop
       playsInline
       preload="auto"
