@@ -28,12 +28,12 @@ export const explorations = [
     images: ['/showcase/explorations/design-exp/tr-assets.png'],
   },
   {
-    title: 'Micro-animations',
+    title: 'Micro-animation, Interaction',
     images: ['/showcase/explorations/ai/manus.mp4'],
     poster: '/showcase/explorations/ai/motion.png',
   },
   {
-    title: 'Chatter.sh',
+    title: 'Chatter.sh, Side Project, Concept',
     images: ['/showcase/explorations/chatter/dashboard.png', '/showcase/explorations/chatter/cluster-details.png', '/showcase/explorations/chatter/chat.png'],
   },
 ];
