@@ -14,7 +14,7 @@ export const explorations = [
   {
     title: 'Doremi Finance — Building',
     images: [
-      '/showcase/explorations/doremi/doremi-landing-vid.mp4',
+      '/showcase/explorations/doremi/doremi-landing-vid-v2.mp4',
       '/showcase/explorations/doremi/doremi-about.png',
       '/showcase/explorations/doremi/doremi-compare-fees.png',
       '/showcase/explorations/doremi/doremi-hero.png',
