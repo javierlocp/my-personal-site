@@ -131,7 +131,7 @@ export default function ExplorationsGrid() {
   return (
     <section aria-label="Project Preview" className="mb-20">
       <div className="mb-10 flex flex-col">
-        <h2 className="mb-4 text-base text-neutral-50">Projects & Explorations</h2>
+        <h2 className="mb-4 text-base text-neutral-50">Design & Exploration</h2>
         <p>Check out some of my side projects and design explorations below, or get in touch if you'd like to read full case studies.</p>
       </div>
 
