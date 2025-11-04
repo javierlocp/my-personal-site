@@ -15,6 +15,7 @@ export const explorations = [
     title: 'Doremi Finance — Building',
     images: [
       '/showcase/explorations/doremi/doremi-landing-vid.mp4',
+      '/showcase/explorations/doremi/doremi-about.png',
       '/showcase/explorations/doremi/doremi-compare-fees.png',
       '/showcase/explorations/doremi/doremi-hero.png',
       '/showcase/explorations/doremi/doremi-feature.png',
@@ -30,5 +31,9 @@ export const explorations = [
     title: 'Micro-animations',
     images: ['/showcase/explorations/ai/manus.mp4'],
     poster: '/showcase/explorations/ai/motion.png',
+  },
+  {
+    title: 'Chatter.sh',
+    images: ['/showcase/explorations/chatter/dashboard.png', '/showcase/explorations/chatter/cluster-details.png', '/showcase/explorations/chatter/chat.png'],
   },
 ];
