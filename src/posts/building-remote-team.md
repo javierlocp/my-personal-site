@@ -2,7 +2,7 @@
 title: Lessons in Building Remote Design Team
 slug: building-remote-team
 date: 2025-10-17
-description: Building a high performing design team is hard, but building a remote team is harder.
+description: What I learned in building a remote design team
 image: /blog/remote-team/cover.png
 readingTime: 5
 tags: ['design', 'process', 'lessons', 'leadership']
