@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import MainLayout from '@/layouts/MainLayout';
+import BlogPostLayout from '@/layouts/BlogPostLayout';
 import Home from '@/pages/Home';
 import Blog from '@/pages/blog/Blog';
 import BlogPost from '@/pages/blog/BlogPost';
@@ -20,13 +21,15 @@ inject();
 function App() {
   useUmamiPageView();
   return (
-    <MainLayout>
-      <Routes>
+    <Routes>
+      <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} className=""></Route>
         <Route path="/blog" element={<Blog />}></Route>
+      </Route>
+      <Route element={<BlogPostLayout />}>
         <Route path="/blog/:slug" element={<BlogPost />}></Route>
-      </Routes>
-    </MainLayout>
+      </Route>
+    </Routes>
   );
 }
 

@@ -37,11 +37,7 @@ const BlogPost = () => {
   return (
     <>
       <article>
-        <span className="mb-4 flex items-center gap-5 font-mono text-xs text-neutral-400">
-          <Link to="/blog" className="hover:text-white">
-            Back to All Writings
-          </Link>
-          <div className="h-4 w-px bg-gradient-to-b from-transparent via-gray-400/70 to-transparent" />
+        <span className="mt-10 mb-4 flex items-center gap-5 font-mono text-xs text-neutral-400">
           {new Date(post.date).toLocaleDateString('en-GB', {
             weekday: 'long',
             day: 'numeric',

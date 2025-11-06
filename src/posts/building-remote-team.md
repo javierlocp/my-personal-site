@@ -2,9 +2,9 @@
 title: Lessons in Building Remote Design Team
 slug: building-remote-team
 date: 2025-10-17
-description: What I learned in building a remote design team
+description: Key learnings and lessons from building remote design team
 image: /blog/remote-team/cover.png
-readingTime: 5
+readingTime: 4
 tags: ['design', 'process', 'lessons', 'leadership']
 ---
 
