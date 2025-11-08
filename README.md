@@ -35,6 +35,7 @@ My primary goals:
 General
 
 - [x] Add LinkedIn and Email
+- [x] Change repo name
 
 Blog
 
