@@ -26,7 +26,7 @@ const BlogPreview = () => {
               >
                 <div className="flex items-center justify-between gap-4 md:gap-8">
                   <h4 className="max-w-[320px] truncate font-semibold md:max-w-[500px]">{post.title}</h4>
-                  <div className="block flex-grow border-t border-gray-400/25" />
+                  <div className="block grow border-t border-gray-400/25" />
                   <span className="shrink-0 font-mono text-xs text-neutral-400">
                     {new Date(post.date).toLocaleDateString('en-GB', {
                       day: 'numeric',

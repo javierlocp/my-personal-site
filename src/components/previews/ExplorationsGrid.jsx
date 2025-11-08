@@ -137,7 +137,7 @@ export default function ExplorationsGrid() {
 
       {/* Project Gallery Grid */}
 
-      <div className="columns-1 gap-2.5 [column-fill:_balance]">
+      <div className="columns-1 gap-2.5 [column-fill:balance]">
         {thumbs.map((t, idx) => {
           const first = t.images[0];
           const video = isVideo(first);
@@ -147,7 +147,7 @@ export default function ExplorationsGrid() {
               <button
                 type="button"
                 onClick={() => openAt(idx)}
-                className="group/thumbnail relative block aspect-[3/2] w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
+                className="group/thumbnail relative block aspect-3/2 w-full cursor-pointer overflow-hidden rounded-lg focus:ring-2 focus:ring-white/30 focus:outline-none"
                 aria-label={`Open ${t.title}`}
               >
                 {video ? (
